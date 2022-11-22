@@ -1,3 +1,9 @@
+h1 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 32;
+  font-weight: 1000;
+}
+
 .button {
   display: inline-flex;
   height: 50px;
