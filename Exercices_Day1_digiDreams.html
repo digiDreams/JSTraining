@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="JavaScript - Day 1 - Exercices Day One" />
+    <link rel="stylesheet" type="text/css" href="Exercices_Day1_digiDreams/styles.css" />
+    <title>Exercices JS Day 1 - digitalDreamer 16112022 - v21112022</title>
+</head>
+
+<!-- function time_convert(num)
+ { 
+  const hours = Math.floor(num / 60);  
+  const minutes = num % 60;
+  return `${hours}:${minutes}`;         
+}
+-->
+
+<body>
+
+    <h1>Exercices : Variables, Constantes et opérations arithmétiques</h1>
+
+    <button type="button" class="button" onclick="launchExoOne()">
+        <span class="button__text">EXERCICE 1</span>
+    </button>
+    <script>
+
+        function launchExoOne() {
+            let serieName = "Les Combattantes";
+            let seasonsAmountOne = 1;
+            let episodeAmountOne = 8;
+
+            const serieReport = `La série ${serieName} en est actuellement à la saison ${seasonsAmountOne} et comporte au total ${seasonsAmountOne * episodeAmountOne} épisodes.`;
+            console.log(serieReport);
+            alert(serieReport);
+        }
+    </script>
+
+    <button type="button" class="button" onclick="launchExoTwo()">
+        <span class="button__text">EXERCICE 2</span>
+    </button>
+    <script>
+        function launchExoTwo() {
+            let episodeDuration = 70;
+            let episodeAmountTwo = 16;
+            let seasonsAmountTwo = 1;
+            let watchingTotalTime = episodeDuration * episodeAmountTwo * seasonsAmountTwo;
+            let displayResult = `NETFLIX aka MODE PATATE DE SALON\nLe temps total de visionnage de la série sera de ${watchingTotalTime} minutes (soit ${parseInt((watchingTotalTime / 60))} heures), préparez les chips et mettez-vous bien !`;
+            console.log(displayResult);
+            alert(displayResult);
+        }
+    </script>
+
+    <button type="button" class="button" onclick="launchExoThree()">
+        <span class="button__text">EXERCICE 3</span>
+    </button>
+
+    <script>
+        function launchExoThree() {
+            let daysAmount = prompt("Combien de jours ?", "Nombre de jours");
+            let hoursAmount = daysAmount * 24;
+            let minutesAmount = daysAmount * 24 * 60;
+            let secondsAmount = minutesAmount * 24 * 60 * 60;
+            const displayTimes = `Le nombre de ${daysAmount} jours est équivalent à ${numStr(hoursAmount)} heures, soit ${numStr(minutesAmount)} minutes et ${numStr(secondsAmount)} secondes. Vous voulez un café pour patienter ?`;
+            console.log(displayTimes);
+            alert(displayTimes);
+
+            function numStr(a, b) {
+                a = '' + a;
+                b = b || ' ';
+                var c = '',
+                    d = 0;
+                while (a.match(/^0[0-9]/)) {
+                    a = a.substr(1);
+                }
+                for (var i = a.length - 1; i >= 0; i--) {
+                    c = (d != 0 && d % 3 == 0) ? a[i] + b + c : a[i] + c;
+                    d++;
+                }
+                return c;
+            }
+        }
+    </script>
+
+    <h1>Structures conditionnelles</h1>
+
+    <button type="button" class="button" onclick="launchExoFour()">
+        <span class="button__text">EXERCICE 1 - VIDEUR VIRTUEL</span>
+    </button>
+
+
+    <script>
+        function launchExoFour() {
+            const checkIfMajor = 18;
+            let firstNameOne = prompt("Prénom:", "Prénom");
+            let whatsYourAgeOne = prompt("Saisissez votre âge :", "Âge");
+            let ageOne = parseInt(whatsYourAgeOne);
+
+            // Affichage console de control flow pour vérifier que l'input est bien un Int + boucle do...while de vérification que ageOne === Integer
+
+            do {
+                alert("Vous devez entrer une valeur numérique ! Recommencez SVP");
+                let whatsYourAgeOne = prompt("Saisissez votre âge :", "Âge");
+                let ageOne = parseInt(whatsYourAgeOne);
+            } while (ageOne === NaN);
+
+            if (ageOne < checkIfMajor) {
+                console.log("Rentre chez toi boire un sirop, ta mère va s'inquiéter !");
+                alert("Rentre chez toi boire un sirop, ta mère va s'inquiéter !");
+            } else if (ageOne == checkIfMajor) {
+                console.log("OK, tu peux rentrer c'est happy hour !");
+                alert("OK, tu peux rentrer c'est happy hour !");
+            } else if (ageOne >= checkIfMajor) {
+                console.log("L'alcool ne rend pas cool dans une discussion, mais tant que tu payes tes consos, restes jusqu'à la fermeture l'ami(e) !");
+                alert("L'alcool ne rend pas cool dans une discussion, mais tant que tu payes tes consos, restes jusqu'à la fermeture l'ami(e) !");
+            } else {
+                console.log("Error");
+                alert("Error");
+            }
+        }
+    </script>
+
+<button type="button" class="button" onclick="launchExoFive()">
+        <span class="button__text">EXERCICE 2 : SWITCH</span>
+
+    <script>
+        function launchExoFive() {
+        let whatsYourAgeTwo = prompt("Saisissez votre âge :", "Âge")
+        let ageTwo = parseInt(whatsYourAgeTwo, 10);
+        console.log(Number.isInteger(ageTwo)); // control flow pour vérifier que l'input est bien un Int
+        const greetings = `Bienvenue ${firstName}, vous avez donc ${ageTwo} ans !`;
+        let returnUserText;
+
+        switch (whatsYourAge) {
+            case (whatsYourAge < checkIfMajor):
+                console.log(returnUserText = "Rentre boire un sirop, ta mère va s'inquiéter");
+                /*document.write(returnUserText = "Rentre boire un sirop, ta mère va s'inquiéter");*/
+                break;
+            case (whatsYourAge = checkIfMajor):
+                console.log(returnUserText = "OK, tu peux rentrer c'est happy hour");
+                /*document.write(returnUserText = "OK, tu peux rentrer c'est happy hour");*/
+                break;
+            case (whatsYourAge >= checkIfMajor):
+                console.log(returnUserText = "L'alcool ne rend pas cool dans une discussion, mais tant que tu payes tes consos, restes jusqu'à la fermeture l'ami");
+                /*document.write(returnUserText = "L'alcool ne rend pas cool dans une discussion, mais tant que tu payes tes consos, restes jusqu'à la fermeture l'ami");*/
+                break;
+            default:
+                returnUserText = "Il y a un mojito dans le code, error !";
+
+        }
+    }
+    
+
+    </script>
+
+    <h1>Boucles</h1>
+    <h2>Exercice 1</h2>
+    <script>
+        // noprotect
+        let numberOfIterations = prompt("Combien de chiffres voulez-vous afficher à la console ?");
+        for (let i = 0; i <= numberOfIterations; i++) {
+            console.log(i);
+        }
+        console.log(`Tous les nombres de 0 à ${numberOfIterations} ont été affichés !`);
+    </script>
+    <h2>Exercice 2</h2>
+    <script>
+
+    </script>
+</body>
+
+</html>
