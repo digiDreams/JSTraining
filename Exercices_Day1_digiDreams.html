@@ -121,53 +121,63 @@
         }
     </script>
 
-<button type="button" class="button" onclick="launchExoFive()">
-        <span class="button__text">EXERCICE 2 : SWITCH</span>
-</button>
+    <button type="button" class="button" onclick="launchExoFive()">
+        <span class="button__text">EXERCICE 2 - SWITCH</span>
+    </button>
 
     <script>
         function launchExoFive() {
-        let whatsYourAgeTwo = prompt("Saisissez votre âge :", "Âge")
-        let ageTwo = parseInt(whatsYourAgeTwo, 10);
-        console.log(Number.isInteger(ageTwo)); // control flow pour vérifier que l'input est bien un Int
-        const greetings = `Bienvenue ${firstName}, vous avez donc ${ageTwo} ans !`;
-        let returnUserText;
+            let whatsYourAgeTwo = prompt("Saisissez votre âge :", "Âge")
+            let ageTwo = parseInt(whatsYourAgeTwo, 10);
+            console.log(Number.isInteger(ageTwo)); // control flow pour vérifier que l'input est bien un Int
+            const greetings = `Bienvenue ${firstName}, vous avez donc ${ageTwo} ans !`;
+            let returnUserText;
 
-        switch (whatsYourAge) {
-            case (whatsYourAge < checkIfMajor):
-                console.log(returnUserText = "Rentre boire un sirop, ta mère va s'inquiéter");
-                /*document.write(returnUserText = "Rentre boire un sirop, ta mère va s'inquiéter");*/
-                break;
-            case (whatsYourAge = checkIfMajor):
-                console.log(returnUserText = "OK, tu peux rentrer c'est happy hour");
-                /*document.write(returnUserText = "OK, tu peux rentrer c'est happy hour");*/
-                break;
-            case (whatsYourAge >= checkIfMajor):
-                console.log(returnUserText = "L'alcool ne rend pas cool dans une discussion, mais tant que tu payes tes consos, restes jusqu'à la fermeture l'ami");
-                /*document.write(returnUserText = "L'alcool ne rend pas cool dans une discussion, mais tant que tu payes tes consos, restes jusqu'à la fermeture l'ami");*/
-                break;
-            default:
-                returnUserText = "Il y a un mojito dans le code, error !";
+            switch (whatsYourAge) {
+                case (whatsYourAge < checkIfMajor):
+                    console.log(returnUserText = "Rentre boire un sirop, ta mère va s'inquiéter");
+                    /*document.write(returnUserText = "Rentre boire un sirop, ta mère va s'inquiéter");*/
+                    break;
+                case (whatsYourAge = checkIfMajor):
+                    console.log(returnUserText = "OK, tu peux rentrer c'est happy hour");
+                    /*document.write(returnUserText = "OK, tu peux rentrer c'est happy hour");*/
+                    break;
+                case (whatsYourAge >= checkIfMajor):
+                    console.log(returnUserText = "L'alcool ne rend pas cool dans une discussion, mais tant que tu payes tes consos, restes jusqu'à la fermeture l'ami");
+                    /*document.write(returnUserText = "L'alcool ne rend pas cool dans une discussion, mais tant que tu payes tes consos, restes jusqu'à la fermeture l'ami");*/
+                    break;
+                default:
+                    returnUserText = "Il y a un mojito dans le code, error !";
 
+            }
         }
-    }
-    
+
 
     </script>
 
     <h1>Boucles</h1>
-    <h2>Exercice 1</h2>
-    <script>
-        // noprotect
-        let numberOfIterations = prompt("Combien de chiffres voulez-vous afficher à la console ?");
-        for (let i = 0; i <= numberOfIterations; i++) {
-            console.log(i);
-        }
-        console.log(`Tous les nombres de 0 à ${numberOfIterations} ont été affichés !`);
-    </script>
-    <h2>Exercice 2</h2>
-    <script>
 
+    <button type="button" class="button" onclick="launchExoSix()">
+        <span class="button__text">Exercice 1</span>
+    </button>
+    <script>
+        function launchExoSix() {
+            // noprotect
+            let numberOfIterations = prompt("Combien de chiffres voulez-vous afficher à la console ?");
+            for (let i = 0; i <= numberOfIterations; i++) {
+                console.log(i);
+            }
+            console.log(`Tous les nombres de 0 à ${numberOfIterations} ont été affichés !`);
+        }
+    </script>
+
+    <button type="button" class="button" onclick="launchExoSeven()">
+        <span class="button__text">Exercice 2</span>
+    </button>
+    <script>
+        function launchExoSeven() {
+
+        }
     </script>
 </body>
 
