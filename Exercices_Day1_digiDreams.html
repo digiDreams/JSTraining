@@ -176,7 +176,7 @@
     </button>
     <script>
         function launchExoSeven() {
-
+            
             const theTwentySeven = [
                 "Robert Johnson",
                 "Brian Jones",
@@ -187,39 +187,12 @@
                 "Amy Winehouse",
 
             ]
-
-
-            for (let i = 0; i < theTwentySeven[4]; i++) {
-                console.log(theTwentySeven[i]);
-                var dataPrint = [theTwentySeven[i]]
+            const displaySomePeople = [];
+            for (let index = 0; index < 4; index++) {
+                console.log(theTwentySeven[index]);
+                 displaySomePeople.push(" " + theTwentySeven[index]);
             }
-            alert(dataPrint);
-
-            /*  const theTwentySeven = [
-                 "Robert Johnson",
-                 "Brian Jones",
-                 "Jimi Hendrix",
-                 "Janis Joplin",
-                 "Jim Morrison",
-                 "Kurt Cobain",
-                 "Amy Winehouse",
- 
-             ]
- 
- 
-             for (let i = 0; i < 4; i++) {
-                 console.log(theTwentySeven[i]);
-                 let dataPrint = [i]
-             }
-             alert(dataPrint); */
-            /* for (let i in theTwentySeven) {
-                console.log(theTwentySeven[i]);
-            }*/
-
-            /*  for (let i in theTwentySeven; i <= 5) {
-                  console.log(theTwentySeven[i]);
-              }
-  */
+          alert(displaySomePeople);
 
 
         }
@@ -298,6 +271,7 @@
             dataTemp = [];
             index = 0;
 
+          
 // MARK
 
             // Javascript program to print all
