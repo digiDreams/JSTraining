@@ -188,10 +188,38 @@
 
             ]
 
-            for (let i in theTwentySeven; i <=5) {
-                console.log(theTwentySeven[i]);
-            }
 
+            for (let i = 0; i < theTwentySeven[4]; i++) {
+                console.log(theTwentySeven[i]);
+                var dataPrint = [theTwentySeven[i]]
+            }
+            alert(dataPrint);
+
+            /*  const theTwentySeven = [
+                 "Robert Johnson",
+                 "Brian Jones",
+                 "Jimi Hendrix",
+                 "Janis Joplin",
+                 "Jim Morrison",
+                 "Kurt Cobain",
+                 "Amy Winehouse",
+ 
+             ]
+ 
+ 
+             for (let i = 0; i < 4; i++) {
+                 console.log(theTwentySeven[i]);
+                 let dataPrint = [i]
+             }
+             alert(dataPrint); */
+            /* for (let i in theTwentySeven) {
+                console.log(theTwentySeven[i]);
+            }*/
+
+            /*  for (let i in theTwentySeven; i <= 5) {
+                  console.log(theTwentySeven[i]);
+              }
+  */
 
 
         }
@@ -202,6 +230,22 @@
     <script>
         function launchExoEight() {
 
+            // noprotect
+            let bestScore = prompt("Meilleur score obtenu ?", "Meilleur Score");
+            let currentScore = prompt("Score en cours ?");
+            let currentScoreAtStart = currentScore;
+            while (currentScore <= bestScore) {
+                currentScore++
+                console.log(currentScore - 1);
+            }
+            console.log(`Le meilleur score obtenu est de ${bestScore} et tous les points de ${currentScoreAtStart} à ${currentScore - 1} ont été marqués !`);
+            alert(`Le meilleur score obtenu est de ${bestScore} et tous les points de ${currentScoreAtStart} à ${currentScore - 1} ont été marqués !`);
+            /* let bestScore = 48;
+             // let currentScore = prompt("Score en cours ?");
+             while (let currentScore = 0; currentScore <= bestScore; currentScore++) {
+                 console.log(currentScore);
+             }
+             console.log(`Tous les points de 0 à ${currentScore} ont été marqués !`); */
         }
     </script>
     <button type="button" class="button" onclick="launchExoNine()">
@@ -209,7 +253,24 @@
     </button>
     <script>
         function launchExoNine() {
-
+            const theSeventeenHeroes = [
+                12,
+                17,
+                8,
+                7,
+                11,
+                15,
+                6,
+                9,
+                13,
+                8,
+                14,
+                12,
+                17,
+                11,
+            ]
+            let averageCalc = // somme totale des elements du tableau / nb delements du tableau
+                console.log(averageCalc);
         }
     </script>
     <button type="button" class="button" onclick="launchExoTen()">
@@ -227,15 +288,84 @@
             // console.log(firstNumber, secondNumber, thirdNumber);
             console.log(dicesResult);
 
+            // aleatoire a trois chiffre random
+
+            // A la place, algo qui va générer toutes les combinaisons (avant step de declaration d'array vide) ; append dans l'array
+            // Nombre aléatoire à trois chiffres
+            const goldenCombination = [4, 2, 1];
+            // goldenCombination.sort();
+            const amountOfTin = 3;
+            dataTemp = [];
+            index = 0;
+
+// MARK
+
+            // Javascript program to print all
+            // combination of size r in an array of size n  
+
+            /* goldenCombination[]  ---> Input Array
+            dataTemp[] ---> Temporary array to store current combination
+            start & end ---> Starting and Ending indexes in arr[]
+            index  ---> Current index in data[]
+            r ---> Size of a combination to be printed */
+            function combinationUtil(goldenCombination, dataTemp, start, end, index, r) {
+                // Current combination is ready to be printed, print it
+                if (index == r) {
+                    for (let j = 0; j < r; j++) {
+                        document.write(dataTemp[j] + " ");
+                    }
+                    document.write("<br>")
+                }
+
+                // replace index with all possible elements. The condition
+                // "end-i+1 >= r-index" makes sure that including one element
+                // at index will make a combination with remaining elements
+                // at remaining positions
+                for (let i = start; i <= end && end - i + 1 >= r - index; i++) {
+                    dataTemp[index] = goldenCombination[i];
+                    combinationUtil(goldenCombination, dataTemp, i + 1, end, index + 1, r);
+                }
+            }
+
+            // The main function that prints all combinations of size r
+            // in arr[] of size n. This function mainly uses combinationUtil()
+            function printCombination(goldenCombination, n, r) {
+                // A temporary array to store all combination one by one
+                let dataTemp = new Array(r);
+
+                // Sorting Array
+                dataTemp.sort();
+
+                // Print all combination using temporary array 'data[]'
+                combinationUtil(goldenCombination, dataTemp, 0, n - 1, 0, r);
+            }
+
+            /*Driver function to check for above function*/
+            let goldenCombination = [1, 2, 3, 4, 5];
+            let r = 3;
+            let n = arr.length;
+            printCombination(arr, n, r);
+
+            // Since the elements are sorted, all occurrences of an element
+            // must be together
+            while (goldenCombination[i] == goldenCombination[i + 1])
+                i++;
+
+
+            goldenCombination.push(RESU COMBI);
+
+
+            // Comparaison
+
 
 
             // On vérifie via une condition que le résultat correspond à une occurrence possible.
-            if (dicesResult == parseInt("421")){
+            if (dicesResult == parseInt("421")) {
                 console.log("C'est gagné !");
                 alert("C'est gagné !");
             } else {
-                console.log("Perdu ! Retentez votre chance !");
-                alert("Perdu ! Retentez votre chance !");
+                console.log(`${dicesResult}` + " " + `C'est perdu ! Retentez votre chance !`);
+                alert(`${dicesResult}` + " " + `C'est perdu ! Retentez votre chance !`);
             }
 
         }
