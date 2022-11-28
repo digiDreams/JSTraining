@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="JavaScript - Day 1 - Exercices Day One" />
     <link rel="stylesheet" type="text/css" href="Exercices_Day1_digiDreams/styles.css" />
-    <title>Exercices JS Day 1 - digitalDreamer 16112022 - v21112022</title>
+    <title>Exercices JS Day 1 - digitalDreamer</title>
+    <!-- Photo by <a href="https://unsplash.com/es/@tricell1991?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Waranont (Joe)</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> -->
+    <!-- <a href="https://commons.wikimedia.org/wiki/File:Unofficial_JavaScript_logo_2.svg">Chris Williams</a>, Public domain, via Wikimedia Commons -->
 </head>
 
 <!-- function time_convert(num)
@@ -18,332 +20,360 @@
 -->
 
 <body>
+    <header>
+        <div class="wrapper">
+            <div class="content">
+                <h1><a
+                        href="file:///Users/apprenant16/Documents/RATTRAPAGE/01_JS_Exercices/DAY1 - JS/Exercices_Day1_digiDreams/images/jsLogo.svg"></a>JavaScript
+                    - Day 1</h1>
+                <h2>Hello les trolls & lutins des forêts !</h2>
+                <p class="subtitle">La drogue est à droite du réfrigérateur... <br> mais j'ai piqué tous les filtres AH
+                    AH AH </p>
+            </div>
+        </div>
+    </header>
 
-    <h1>Variables, Constantes et opérations arithmétiques</h1>
+    <main>
+        <h1>Variables, Constantes et opérations arithmétiques</h1>
+        <br>
+        <button type="button" class="button" onclick="launchExoOne()">
+            <span class="button__text">EX01 - SERIE_DISPLAY</span>
+        </button>
+        <script>
 
-    <button type="button" class="button" onclick="launchExoOne()">
-        <span class="button__text">EXERCICE 1</span>
-    </button>
-    <script>
+            function launchExoOne() {
+                let serieName = "Les Combattantes";
+                let seasonsAmountOne = 1;
+                let episodeAmountOne = 8;
 
-        function launchExoOne() {
-            let serieName = "Les Combattantes";
-            let seasonsAmountOne = 1;
-            let episodeAmountOne = 8;
-
-            const serieReport = `La série ${serieName} en est actuellement à la saison ${seasonsAmountOne} et comporte au total ${seasonsAmountOne * episodeAmountOne} épisodes.`;
-            console.log(serieReport);
-            alert(serieReport);
-        }
-    </script>
-
-    <button type="button" class="button" onclick="launchExoTwo()">
-        <span class="button__text">EXERCICE 2</span>
-    </button>
-    <script>
-        function launchExoTwo() {
-            let episodeDuration = 70;
-            let episodeAmountTwo = 16;
-            let seasonsAmountTwo = 1;
-            let watchingTotalTime = episodeDuration * episodeAmountTwo * seasonsAmountTwo;
-            let displayResult = `NETFLIX aka MODE PATATE DE SALON\nLe temps total de visionnage de la série sera de ${watchingTotalTime} minutes (soit ${parseInt((watchingTotalTime / 60))} heures), préparez les chips et mettez-vous bien !`;
-            console.log(displayResult);
-            alert(displayResult);
-        }
-    </script>
-
-    <button type="button" class="button" onclick="launchExoThree()">
-        <span class="button__text">EXERCICE 3</span>
-    </button>
-
-    <script>
-        function launchExoThree() {
-            let daysAmount = prompt("Combien de jours ?", "Nombre de jours");
-            let hoursAmount = daysAmount * 24;
-            let minutesAmount = daysAmount * 24 * 60;
-            let secondsAmount = minutesAmount * 24 * 60 * 60;
-            const displayTimes = `Le nombre de ${daysAmount} jours est équivalent à ${numStr(hoursAmount)} heures, soit ${numStr(minutesAmount)} minutes et ${numStr(secondsAmount)} secondes. Vous voulez un café pour patienter ?`;
-            console.log(displayTimes);
-            alert(displayTimes);
-
-            function numStr(a, b) {
-                a = '' + a;
-                b = b || ' ';
-                var c = '',
-                    d = 0;
-                while (a.match(/^0[0-9]/)) {
-                    a = a.substr(1);
-                }
-                for (var i = a.length - 1; i >= 0; i--) {
-                    c = (d != 0 && d % 3 == 0) ? a[i] + b + c : a[i] + c;
-                    d++;
-                }
-                return c;
+                const serieReport = `La série ${serieName} en est actuellement à la saison ${seasonsAmountOne} et comporte au total ${seasonsAmountOne * episodeAmountOne} épisodes.`;
+                console.log(serieReport);
+                alert(serieReport);
             }
-        }
-    </script>
+        </script>
 
-    <h1>Structures conditionnelles</h1>
+        <button type="button" class="button" onclick="launchExoTwo()">
+            <span class="button__text">EX02 - SERIE_TIME_CALC</span>
+        </button>
+        <script>
+            function launchExoTwo() {
+                let episodeDuration = 70;
+                let episodeAmountTwo = 16;
+                let seasonsAmountTwo = 1;
+                let watchingTotalTime = episodeDuration * episodeAmountTwo * seasonsAmountTwo;
+                let displayResult = `NETFLIX aka MODE PATATE DE SALON\nLe temps total de visionnage de la série sera de ${watchingTotalTime} minutes (soit ${parseInt((watchingTotalTime / 60))} heures), préparez les chips et mettez-vous bien !`;
+                console.log(displayResult);
+                alert(displayResult);
+            }
+        </script>
 
-    <button type="button" class="button" onclick="launchExoFour()">
-        <span class="button__text">EXERCICE 1 - VIDEUR VIRTUEL</span>
-    </button>
+        <button type="button" class="button" onclick="launchExoThree()">
+            <span class="button__text">EXERCICE 3</span>
+        </button>
+
+        <script>
+            function launchExoThree() {
+                let daysAmount = prompt("Combien de jours ?", "Nombre de jours");
+                let hoursAmount = daysAmount * 24;
+                let minutesAmount = daysAmount * 24 * 60;
+                let secondsAmount = minutesAmount * 24 * 60 * 60;
+                const displayTimes = `Le nombre de ${daysAmount} jours est équivalent à ${numStr(hoursAmount)} heures, soit ${numStr(minutesAmount)} minutes et ${numStr(secondsAmount)} secondes. Vous voulez un café pour patienter ?`;
+                console.log(displayTimes);
+                alert(displayTimes);
+
+                function numStr(a, b) {
+                    a = '' + a;
+                    b = b || ' ';
+                    var c = '',
+                        d = 0;
+                    while (a.match(/^0[0-9]/)) {
+                        a = a.substr(1);
+                    }
+                    for (var i = a.length - 1; i >= 0; i--) {
+                        c = (d != 0 && d % 3 == 0) ? a[i] + b + c : a[i] + c;
+                        d++;
+                    }
+                    return c;
+                }
+            }
+        </script>
+        <br>
+        <h1>Structures conditionnelles</h1>
+        <br>
+        <button type="button" class="button" onclick="launchExoFour()">
+            <span class="button__text">EXERCICE 1 - VIDEUR VIRTUEL</span>
+        </button>
 
 
-    <script>
-        function launchExoFour() {
-            const checkIfMajor = 18;
-            let firstNameOne = prompt("Prénom:", "Prénom");
-            let whatsYourAgeOne = prompt("Saisissez votre âge :", "Âge");
-            let ageOne = parseInt(whatsYourAgeOne);
-
-            // Affichage console de control flow pour vérifier que l'input est bien un Int + boucle do...while de vérification que ageOne === Integer
-
-            do {
-                alert("Vous devez entrer une valeur numérique ! Recommencez SVP");
+        <script>
+            function launchExoFour() {
+                const checkIfMajor = 18;
+                let firstNameOne = prompt("Prénom:", "Prénom");
                 let whatsYourAgeOne = prompt("Saisissez votre âge :", "Âge");
                 let ageOne = parseInt(whatsYourAgeOne);
-            } while (ageOne === NaN);
 
-            if (ageOne < checkIfMajor) {
-                console.log("Rentre chez toi boire un sirop, ta mère va s'inquiéter !");
-                alert("Rentre chez toi boire un sirop, ta mère va s'inquiéter !");
-            } else if (ageOne == checkIfMajor) {
-                console.log("OK, tu peux rentrer c'est happy hour !");
-                alert("OK, tu peux rentrer c'est happy hour !");
-            } else if (ageOne >= checkIfMajor) {
-                console.log("L'alcool ne rend pas cool dans une discussion, mais tant que tu payes tes consos, restes jusqu'à la fermeture l'ami(e) !");
-                alert("L'alcool ne rend pas cool dans une discussion, mais tant que tu payes tes consos, restes jusqu'à la fermeture l'ami(e) !");
-            } else {
-                console.log("Error");
-                alert("Error");
+                // Affichage console de control flow pour vérifier que l'input est bien un Int + boucle do...while de vérification que ageOne === Integer
+
+                do {
+                    alert("Vous devez entrer une valeur numérique ! Recommencez SVP");
+                    let whatsYourAgeOne = prompt("Saisissez votre âge :", "Âge");
+                    let ageOne = parseInt(whatsYourAgeOne);
+                } while (ageOne === NaN);
+
+                if (ageOne < checkIfMajor) {
+                    console.log("Rentre chez toi boire un sirop, ta mère va s'inquiéter !");
+                    alert("Rentre chez toi boire un sirop, ta mère va s'inquiéter !");
+                } else if (ageOne == checkIfMajor) {
+                    console.log("OK, tu peux rentrer c'est happy hour !");
+                    alert("OK, tu peux rentrer c'est happy hour !");
+                } else if (ageOne >= checkIfMajor) {
+                    console.log("L'alcool ne rend pas cool dans une discussion, mais tant que tu payes tes consos, restes jusqu'à la fermeture l'ami(e) !");
+                    alert("L'alcool ne rend pas cool dans une discussion, mais tant que tu payes tes consos, restes jusqu'à la fermeture l'ami(e) !");
+                } else {
+                    console.log("Error");
+                    alert("Error");
+                }
             }
-        }
-    </script>
+        </script>
 
-    <button type="button" class="button" onclick="launchExoFive()">
-        <span class="button__text">EXERCICE 2 - SWITCH</span>
-    </button>
+        <button type="button" class="button" onclick="launchExoFive()">
+            <span class="button__text">EXERCICE 2 - SWITCH</span>
+        </button>
 
-    <script>
-        function launchExoFive() {
-            let whatsYourAgeTwo = prompt("Saisissez votre âge :", "Âge")
-            let ageTwo = parseInt(whatsYourAgeTwo, 10);
-            console.log(Number.isInteger(ageTwo)); // control flow pour vérifier que l'input est bien un Int
-            const greetings = `Bienvenue ${firstName}, vous avez donc ${ageTwo} ans !`;
-            let returnUserText;
+        <script>
+            function launchExoFive() {
+                let whatsYourAgeTwo = prompt("Saisissez votre âge :", "Âge")
+                let ageTwo = parseInt(whatsYourAgeTwo, 10);
+                console.log(Number.isInteger(ageTwo)); // control flow pour vérifier que l'input est bien un Int
+                const greetings = `Bienvenue ${firstName}, vous avez donc ${ageTwo} ans !`;
+                let returnUserText;
 
-            switch (whatsYourAge) {
-                case (whatsYourAge < checkIfMajor):
-                    console.log(returnUserText = "Rentre boire un sirop, ta mère va s'inquiéter");
-                    /*document.write(returnUserText = "Rentre boire un sirop, ta mère va s'inquiéter");*/
-                    break;
-                case (whatsYourAge = checkIfMajor):
-                    console.log(returnUserText = "OK, tu peux rentrer c'est happy hour");
-                    /*document.write(returnUserText = "OK, tu peux rentrer c'est happy hour");*/
-                    break;
-                case (whatsYourAge >= checkIfMajor):
-                    console.log(returnUserText = "L'alcool ne rend pas cool dans une discussion, mais tant que tu payes tes consos, restes jusqu'à la fermeture l'ami");
-                    /*document.write(returnUserText = "L'alcool ne rend pas cool dans une discussion, mais tant que tu payes tes consos, restes jusqu'à la fermeture l'ami");*/
-                    break;
-                default:
-                    returnUserText = "Il y a un mojito dans le code, error !";
+                switch (whatsYourAge) {
+                    case (whatsYourAge < checkIfMajor):
+                        console.log(returnUserText = "Rentre boire un sirop, ta mère va s'inquiéter");
+                        /*document.write(returnUserText = "Rentre boire un sirop, ta mère va s'inquiéter");*/
+                        break;
+                    case (whatsYourAge = checkIfMajor):
+                        console.log(returnUserText = "OK, tu peux rentrer c'est happy hour");
+                        /*document.write(returnUserText = "OK, tu peux rentrer c'est happy hour");*/
+                        break;
+                    case (whatsYourAge >= checkIfMajor):
+                        console.log(returnUserText = "L'alcool ne rend pas cool dans une discussion, mais tant que tu payes tes consos, restes jusqu'à la fermeture l'ami");
+                        /*document.write(returnUserText = "L'alcool ne rend pas cool dans une discussion, mais tant que tu payes tes consos, restes jusqu'à la fermeture l'ami");*/
+                        break;
+                    default:
+                        returnUserText = "Il y a un mojito dans le code, error !";
+
+                }
+            }
+
+
+        </script>
+
+        <h1>Boucles</h1>
+
+        <button type="button" class="button" onclick="launchExoSix()">
+            <span class="button__text">10</span>
+        </button>
+        <script>
+            function launchExoSix() {
+                // noprotect
+                let numberOfIterations = prompt("Combien de chiffres voulez-vous afficher à la console ?");
+                for (let i = 0; i <= numberOfIterations; i++) {
+                    console.log(i);
+                }
+                console.log(`Tous les nombres de 0 à ${numberOfIterations} ont été affichés !`);
+            }
+        </script>
+
+        <button type="button" class="button" onclick="launchExoSeven()">
+            <span class="button__text">Club des 27</span>
+        </button>
+        <script>
+            function launchExoSeven() {
+
+                const theTwentySeven = [
+                    "Robert Johnson",
+                    "Brian Jones",
+                    "Jimi Hendrix",
+                    "Janis Joplin",
+                    "Jim Morrison",
+                    "Kurt Cobain",
+                    "Amy Winehouse",
+
+                ]
+                const displaySomePeople = [];
+                for (let index = 0; index < 4; index++) {
+                    console.log(theTwentySeven[index]);
+                    displaySomePeople.push(" " + theTwentySeven[index]);
+                }
+                alert(displaySomePeople);
+
 
             }
-        }
+        </script>
+        <button type="button" class="button" onclick="launchExoEight()">
+            <span class="button__text">Score</span>
+        </button>
+        <script>
+            function launchExoEight() {
 
-
-    </script>
-
-    <h1>Boucles</h1>
-
-    <button type="button" class="button" onclick="launchExoSix()">
-        <span class="button__text">10</span>
-    </button>
-    <script>
-        function launchExoSix() {
-            // noprotect
-            let numberOfIterations = prompt("Combien de chiffres voulez-vous afficher à la console ?");
-            for (let i = 0; i <= numberOfIterations; i++) {
-                console.log(i);
+                // noprotect
+                let bestScore = prompt("Meilleur score obtenu ?", "Meilleur Score");
+                let currentScore = prompt("Score en cours ?");
+                let currentScoreAtStart = currentScore;
+                while (currentScore <= bestScore) {
+                    currentScore++
+                    console.log(currentScore - 1);
+                }
+                console.log(`Le meilleur score obtenu est de ${bestScore} et tous les points de ${currentScoreAtStart} à ${currentScore - 1} ont été marqués !`);
+                alert(`Le meilleur score obtenu est de ${bestScore} et tous les points de ${currentScoreAtStart} à ${currentScore - 1} ont été marqués !`);
+                /* let bestScore = 48;
+                 // let currentScore = prompt("Score en cours ?");
+                 while (let currentScore = 0; currentScore <= bestScore; currentScore++) {
+                     console.log(currentScore);
+                 }
+                 console.log(`Tous les points de 0 à ${currentScore} ont été marqués !`); */
             }
-            console.log(`Tous les nombres de 0 à ${numberOfIterations} ont été affichés !`);
-        }
-    </script>
-
-    <button type="button" class="button" onclick="launchExoSeven()">
-        <span class="button__text">Club des 27</span>
-    </button>
-    <script>
-        function launchExoSeven() {
-            
-            const theTwentySeven = [
-                "Robert Johnson",
-                "Brian Jones",
-                "Jimi Hendrix",
-                "Janis Joplin",
-                "Jim Morrison",
-                "Kurt Cobain",
-                "Amy Winehouse",
-
-            ]
-            const displaySomePeople = [];
-            for (let index = 0; index < 4; index++) {
-                console.log(theTwentySeven[index]);
-                 displaySomePeople.push(" " + theTwentySeven[index]);
+        </script>
+        <button type="button" class="button" onclick="launchExoNine()">
+            <span class="button__text">Moyenne</span>
+        </button>
+        <script>
+            function launchExoNine() {
+                const theSeventeenHeroes = [
+                    12,
+                    17,
+                    8,
+                    7,
+                    11,
+                    15,
+                    6,
+                    9,
+                    13,
+                    8,
+                    14,
+                    12,
+                    17,
+                    11,
+                ]
+                let averageCalc = // somme totale des elements du tableau / nb delements du tableau
+                    console.log(averageCalc);
             }
-          alert(displaySomePeople);
+        </script>
+        <button type="button" class="button" onclick="launchExoTen()">
+            <span class="button__text">Le 421</span>
+        </button>
+        <script>
+            function launchExoTen() {
+
+                // On déclare nos trois variables, une par dé, et une pour le résultat de la combinaison de dés par concaténation.
+
+                let firstNumber = Math.floor(Math.random() * 10);
+                let secondNumber = Math.floor(Math.random() * 10);
+                let thirdNumber = Math.floor(Math.random() * 10);
+                let dicesResult = firstNumber + " " + secondNumber + " " + thirdNumber;
+                // console.log(firstNumber, secondNumber, thirdNumber);
+                console.log(dicesResult);
+
+                // aleatoire a trois chiffre random
+
+                // A la place, algo qui va générer toutes les combinaisons (avant step de declaration d'array vide) ; append dans l'array
+                // Nombre aléatoire à trois chiffres
+                const goldenCombination = [4, 2, 1];
+                // goldenCombination.sort();
+                const amountOfTin = 3;
+                dataTemp = [];
+                index = 0;
 
 
-        }
-    </script>
-    <button type="button" class="button" onclick="launchExoEight()">
-        <span class="button__text">Score</span>
-    </button>
-    <script>
-        function launchExoEight() {
+                // MARK
 
-            // noprotect
-            let bestScore = prompt("Meilleur score obtenu ?", "Meilleur Score");
-            let currentScore = prompt("Score en cours ?");
-            let currentScoreAtStart = currentScore;
-            while (currentScore <= bestScore) {
-                currentScore++
-                console.log(currentScore - 1);
-            }
-            console.log(`Le meilleur score obtenu est de ${bestScore} et tous les points de ${currentScoreAtStart} à ${currentScore - 1} ont été marqués !`);
-            alert(`Le meilleur score obtenu est de ${bestScore} et tous les points de ${currentScoreAtStart} à ${currentScore - 1} ont été marqués !`);
-            /* let bestScore = 48;
-             // let currentScore = prompt("Score en cours ?");
-             while (let currentScore = 0; currentScore <= bestScore; currentScore++) {
-                 console.log(currentScore);
-             }
-             console.log(`Tous les points de 0 à ${currentScore} ont été marqués !`); */
-        }
-    </script>
-    <button type="button" class="button" onclick="launchExoNine()">
-        <span class="button__text">Moyenne</span>
-    </button>
-    <script>
-        function launchExoNine() {
-            const theSeventeenHeroes = [
-                12,
-                17,
-                8,
-                7,
-                11,
-                15,
-                6,
-                9,
-                13,
-                8,
-                14,
-                12,
-                17,
-                11,
-            ]
-            let averageCalc = // somme totale des elements du tableau / nb delements du tableau
-                console.log(averageCalc);
-        }
-    </script>
-    <button type="button" class="button" onclick="launchExoTen()">
-        <span class="button__text">Le 421</span>
-    </button>
-    <script>
-        function launchExoTen() {
+                // Javascript program to print all
+                // combination of size r in an array of size n  
 
-            // On déclare nos trois variables, une par dé, et une pour le résultat de la combinaison de dés par concaténation.
-
-            let firstNumber = Math.floor(Math.random() * 10);
-            let secondNumber = Math.floor(Math.random() * 10);
-            let thirdNumber = Math.floor(Math.random() * 10);
-            let dicesResult = firstNumber + " " + secondNumber + " " + thirdNumber;
-            // console.log(firstNumber, secondNumber, thirdNumber);
-            console.log(dicesResult);
-
-            // aleatoire a trois chiffre random
-
-            // A la place, algo qui va générer toutes les combinaisons (avant step de declaration d'array vide) ; append dans l'array
-            // Nombre aléatoire à trois chiffres
-            const goldenCombination = [4, 2, 1];
-            // goldenCombination.sort();
-            const amountOfTin = 3;
-            dataTemp = [];
-            index = 0;
-
-          
-// MARK
-
-            // Javascript program to print all
-            // combination of size r in an array of size n  
-
-            /* goldenCombination[]  ---> Input Array
-            dataTemp[] ---> Temporary array to store current combination
-            start & end ---> Starting and Ending indexes in arr[]
-            index  ---> Current index in data[]
-            r ---> Size of a combination to be printed */
-            function combinationUtil(goldenCombination, dataTemp, start, end, index, r) {
-                // Current combination is ready to be printed, print it
-                if (index == r) {
-                    for (let j = 0; j < r; j++) {
-                        document.write(dataTemp[j] + " ");
+                /* goldenCombination[]  ---> Input Array
+                dataTemp[] ---> Temporary array to store current combination
+                start & end ---> Starting and Ending indexes in arr[]
+                index  ---> Current index in data[]
+                r ---> Size of a combination to be printed */
+                function combinationUtil(goldenCombination, dataTemp, start, end, index, r) {
+                    // Current combination is ready to be printed, print it
+                    if (index == r) {
+                        for (let j = 0; j < r; j++) {
+                            document.write(dataTemp[j] + " ");
+                        }
+                        document.write("<br>")
                     }
-                    document.write("<br>")
+
+                    // replace index with all possible elements. The condition
+                    // "end-i+1 >= r-index" makes sure that including one element
+                    // at index will make a combination with remaining elements
+                    // at remaining positions
+                    for (let i = start; i <= end && end - i + 1 >= r - index; i++) {
+                        dataTemp[index] = goldenCombination[i];
+                        combinationUtil(goldenCombination, dataTemp, i + 1, end, index + 1, r);
+                    }
                 }
 
-                // replace index with all possible elements. The condition
-                // "end-i+1 >= r-index" makes sure that including one element
-                // at index will make a combination with remaining elements
-                // at remaining positions
-                for (let i = start; i <= end && end - i + 1 >= r - index; i++) {
-                    dataTemp[index] = goldenCombination[i];
-                    combinationUtil(goldenCombination, dataTemp, i + 1, end, index + 1, r);
+                // The main function that prints all combinations of size r
+                // in arr[] of size n. This function mainly uses combinationUtil()
+                function printCombination(goldenCombination, n, r) {
+                    // A temporary array to store all combination one by one
+                    let dataTemp = new Array(r);
+
+                    // Sorting Array
+                    dataTemp.sort();
+
+                    // Print all combination using temporary array 'data[]'
+                    combinationUtil(goldenCombination, dataTemp, 0, n - 1, 0, r);
                 }
+
+                /*Driver function to check for above function*/
+                let goldenCombination = [1, 2, 3, 4, 5];
+                let r = 3;
+                let n = arr.length;
+                printCombination(arr, n, r);
+
+                // Since the elements are sorted, all occurrences of an element
+                // must be together
+                while (goldenCombination[i] == goldenCombination[i + 1])
+                    i++;
+
+
+                goldenCombination.push(RESU COMBI);
+
+
+                // Comparaison
+
+
+
+                // On vérifie via une condition que le résultat correspond à une occurrence possible.
+                if (dicesResult == parseInt("421")) {
+                    console.log("C'est gagné !");
+                    alert("C'est gagné !");
+                } else {
+                    console.log(`${dicesResult}` + " " + `C'est perdu ! Retentez votre chance !`);
+                    alert(`${dicesResult}` + " " + `C'est perdu ! Retentez votre chance !`);
+                }
+
             }
-
-            // The main function that prints all combinations of size r
-            // in arr[] of size n. This function mainly uses combinationUtil()
-            function printCombination(goldenCombination, n, r) {
-                // A temporary array to store all combination one by one
-                let dataTemp = new Array(r);
-
-                // Sorting Array
-                dataTemp.sort();
-
-                // Print all combination using temporary array 'data[]'
-                combinationUtil(goldenCombination, dataTemp, 0, n - 1, 0, r);
-            }
-
-            /*Driver function to check for above function*/
-            let goldenCombination = [1, 2, 3, 4, 5];
-            let r = 3;
-            let n = arr.length;
-            printCombination(arr, n, r);
-
-            // Since the elements are sorted, all occurrences of an element
-            // must be together
-            while (goldenCombination[i] == goldenCombination[i + 1])
-                i++;
-
-
-            goldenCombination.push(RESU COMBI);
-
-
-            // Comparaison
-
-
-
-            // On vérifie via une condition que le résultat correspond à une occurrence possible.
-            if (dicesResult == parseInt("421")) {
-                console.log("C'est gagné !");
-                alert("C'est gagné !");
-            } else {
-                console.log(`${dicesResult}` + " " + `C'est perdu ! Retentez votre chance !`);
-                alert(`${dicesResult}` + " " + `C'est perdu ! Retentez votre chance !`);
-            }
-
-        }
-    </script>
+        </script>
+        <footer>
+            <p>Crédits images:</p>
+            <ul>
+                <li>
+                    <p> "Awakening of God" by Joe Waranont <a class="Licence"
+                            href="https://unsplash.com/photos/StKUe52oDFk">See original here</a></p>
+                </li>
+                <li>
+                    <p> "Unofficial JavaScript logo 2" by Chris Williams <a class="Licence"
+                            href="https://commons.wikimedia.org/wiki/File:Unofficial_JavaScript_logo_2.svg">See original
+                            here</a>, Public domain, via Wikimedia Commons</p>
+                </li>
+            </ul>
+        </footer>
+    </main>
 </body>
 
 </html>
