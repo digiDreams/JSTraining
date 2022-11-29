@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="JavaScript - Day 1 - Exercices Day One" />
     <link rel="stylesheet" type="text/css" href="Exercices_Day1_digiDreams/styles.css" />
-    <title>Exercices JS Day 1 - digitalDreamer</title>
+    <title>JS Day 1 - Exercices - digiDreams</title>
     <!-- Photo by <a href="https://unsplash.com/es/@tricell1991?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Waranont (Joe)</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> -->
     <!-- <a href="https://commons.wikimedia.org/wiki/File:Unofficial_JavaScript_logo_2.svg">Chris Williams</a>, Public domain, via Wikimedia Commons -->
 </head>
@@ -23,18 +23,18 @@
     <header>
         <div class="wrapper">
             <div class="content">
-                <h1><img src="Exercices_Day1_digiDreams/images/jsLogo.svg"/> JavaScript
+                <h1><img src="Exercices_Day1_digiDreams/images/jsLogo.svg" /> JavaScript
                     - Day 1</h1>
-                <h2>Hello les trolls & lutins des forêts !</h2>
-                <p class="subtitle">La drogue est à droite du réfrigérateur... <br> mais j'ai piqué tous les filtres AH
-                    AH AH </p>
+                <h2>欢迎到首页 ! Welcome !</h2>
+                <p class="subtitle">Below are JS exercices I completed.<br>Don't forget to open developer's console in
+                    your browser to see magic happening !</p>
             </div>
         </div>
     </header>
 
     <main>
         <h1>Variables, Constantes et opérations arithmétiques</h1>
-    
+
         <button type="button" class="button" onclick="launchExoOne()">
             <span class="button__text">EX01 - SERIE_DISPLAY</span>
         </button>
@@ -52,7 +52,7 @@
         </script>
 
         <button type="button" class="button" onclick="launchExoTwo()">
-            <span class="button__text">EX02 - SERIE_TIME_CALC</span>
+            <span class="button__text">EX02 - SERIE_TIMER</span>
         </button>
         <script>
             function launchExoTwo() {
@@ -67,7 +67,7 @@
         </script>
 
         <button type="button" class="button" onclick="launchExoThree()">
-            <span class="button__text">EXERCICE 3</span>
+            <span class="button__text">EX03 - HOW_LONG</span>
         </button>
 
         <script>
@@ -96,11 +96,11 @@
                 }
             }
         </script>
-        
+
         <h1>Structures conditionnelles</h1>
 
         <button type="button" class="button" onclick="launchExoFour()">
-            <span class="button__text">EXERCICE 1 - VIDEUR VIRTUEL</span>
+            <span class="button__text">EX01 - VIDEUR VIRTUEL</span>
         </button>
 
 
@@ -111,13 +111,13 @@
                 let whatsYourAgeOne = prompt("Saisissez votre âge :", "Âge");
                 let ageOne = parseInt(whatsYourAgeOne);
 
-                // Affichage console de control flow pour vérifier que l'input est bien un Int + boucle do...while de vérification que ageOne === Integer
-
+                /* Affichage console de control flow pour vérifier que l'input est bien un Int + boucle do...while de vérification que ageOne === Integer
                 do {
                     alert("Vous devez entrer une valeur numérique ! Recommencez SVP");
                     let whatsYourAgeOne = prompt("Saisissez votre âge :", "Âge");
                     let ageOne = parseInt(whatsYourAgeOne);
                 } while (ageOne === NaN);
+                */
 
                 if (ageOne < checkIfMajor) {
                     console.log("Rentre chez toi boire un sirop, ta mère va s'inquiéter !");
@@ -141,29 +141,44 @@
 
         <script>
             function launchExoFive() {
-                let whatsYourAgeTwo = prompt("Saisissez votre âge :", "Âge")
-                let ageTwo = parseInt(whatsYourAgeTwo, 10);
-                console.log(Number.isInteger(ageTwo)); // control flow pour vérifier que l'input est bien un Int
-                const greetings = `Bienvenue ${firstName}, vous avez donc ${ageTwo} ans !`;
-                let returnUserText;
+                const compareNum = 5;
+                let someNumo = prompt("Choisissez un numéro !"); // 4
+                let getNumo = parseInt(someNumo);
+                // console.log(getNumo);
 
-                switch (whatsYourAge) {
-                    case (whatsYourAge < checkIfMajor):
-                        console.log(returnUserText = "Rentre boire un sirop, ta mère va s'inquiéter");
-                        /*document.write(returnUserText = "Rentre boire un sirop, ta mère va s'inquiéter");*/
-                        break;
-                    case (whatsYourAge = checkIfMajor):
-                        console.log(returnUserText = "OK, tu peux rentrer c'est happy hour");
-                        /*document.write(returnUserText = "OK, tu peux rentrer c'est happy hour");*/
-                        break;
-                    case (whatsYourAge >= checkIfMajor):
-                        console.log(returnUserText = "L'alcool ne rend pas cool dans une discussion, mais tant que tu payes tes consos, restes jusqu'à la fermeture l'ami");
-                        /*document.write(returnUserText = "L'alcool ne rend pas cool dans une discussion, mais tant que tu payes tes consos, restes jusqu'à la fermeture l'ami");*/
-                        break;
-                    default:
-                        returnUserText = "Il y a un mojito dans le code, error !";
-
+                switch (getNumo) {
+                    case (getNumo < compareNum):
+                        console.log("Inférieur à 5");
+                    case (getNumo === compareNum):
+                        console.log("Egalà 5");
+                    case (getNumo > compareNum):
+                        console.log("Supérieur à 5")
                 }
+                /*
+                                const checkIfMajorTwo = 18;
+                                let firstNameTwo = prompt("Prénom:", "Prénom");
+                                let whatsYourAgeTwo = prompt("Saisissez votre âge :", "Âge");
+                                let ageTwo = parseInt(whatsYourAgeTwo, 10);
+                                // console.log(Number.isInteger(ageTwo)); // control flow pour vérifier que l'input est bien un Int
+                
+                
+                                switch (whatsYourAgeTwo) {
+                                    case (whatsYourAgeTwo < checkIfMajorTwo):
+                                        console.log(returnUserText = "Rentre boire un sirop, ta mère va s'inquiéter");
+                                        alert(returnUserText = "Rentre boire un sirop, ta mère va s'inquiéter");
+                                        break;
+                                    case (whatsYourAgeTwo == checkIfMajorTwo):
+                                        console.log(returnUserText = "OK, tu peux rentrer c'est happy hour");
+                                        alert(returnUserText = "OK, tu peux rentrer c'est happy hour");
+                                        break;
+                                    case (whatsYourAgeTwo >= checkIfMajorTwo):
+                                        console.log(returnUserText = "L'alcool ne rend pas cool dans une discussion, mais tant que tu payes tes consos, restes jusqu'à la fermeture l'ami(e)");
+                                        alert(returnUserText = "L'alcool ne rend pas cool dans une discussion, mais tant que tu payes tes consos, restes jusqu'à la fermeture l'ami(e)");
+                                        break;
+                                    default:
+                                        returnUserText = "Il y a un mojito dans le code, error !";
+                
+                                } */
             }
 
 
@@ -279,7 +294,7 @@
 
                 // A la place, algo qui va générer toutes les combinaisons (avant step de declaration d'array vide) ; append dans l'array
                 // Nombre aléatoire à trois chiffres
-                const goldenCombination = [4, 2, 1];
+                var goldenCombination = [4, 2, 1];
                 // goldenCombination.sort();
                 const amountOfTin = 3;
                 dataTemp = [];
@@ -300,9 +315,9 @@
                     // Current combination is ready to be printed, print it
                     if (index == r) {
                         for (let j = 0; j < r; j++) {
-                            document.write(dataTemp[j] + " ");
+                            alert(dataTemp[j] + " ");
                         }
-                        document.write("<br>")
+                        alert("<br>")
                     }
 
                     // replace index with all possible elements. The condition
@@ -329,7 +344,7 @@
                 }
 
                 /*Driver function to check for above function*/
-                let goldenCombination = [1, 2, 3, 4, 5];
+                var goldenCombination = [1, 2, 3, 4, 5];
                 let r = 3;
                 let n = arr.length;
                 printCombination(arr, n, r);
@@ -340,7 +355,7 @@
                     i++;
 
 
-                goldenCombination.push(RESU COMBI);
+                goldenCombination.push(""); // RESU COMBI
 
 
                 // Comparaison
@@ -358,21 +373,22 @@
 
             }
         </script>
-        <footer>
-            <h3>Crédits images:</h3>
-            <ul>
-                <li>
-                    <p> "Awakening of God" by Joe Waranont <a class="Licence"
-                            href="https://unsplash.com/photos/StKUe52oDFk">See original here</a></p>
-                </li>
-                <li>
-                    <p> "Unofficial JavaScript logo 2" by Chris Williams <a class="Licence"
-                            href="https://commons.wikimedia.org/wiki/File:Unofficial_JavaScript_logo_2.svg">See original
-                            here</a>, Public domain, via Wikimedia Commons</p>
-                </li>
-            </ul>
-        </footer>
     </main>
+    <footer>
+        <h3>Crédits images:</h3>
+        <ul>
+            <li>
+                <p> "Awakening of God" by Joe Waranont <a class="Licence" href="https://unsplash.com/photos/StKUe52oDFk"
+                        target="_blank">See original here</a></p>
+            </li>
+            <li>
+                <p> "Unofficial JavaScript logo 2" by Chris Williams <a class="Licence"
+                        href="https://commons.wikimedia.org/wiki/File:Unofficial_JavaScript_logo_2.svg"
+                        target="_blank">See original
+                        here</a>, Public domain, via Wikimedia Commons</p>
+            </li>
+        </ul>
+    </footer>
 </body>
 
 </html>
