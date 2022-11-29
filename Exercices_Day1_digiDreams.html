@@ -187,7 +187,7 @@
         <h1>Boucles</h1>
 
         <button type="button" class="button" onclick="launchExoSix()">
-            <span class="button__text">10</span>
+            <span class="button__text">EX01 - 10</span>
         </button>
         <script>
             function launchExoSix() {
@@ -201,7 +201,7 @@
         </script>
 
         <button type="button" class="button" onclick="launchExoSeven()">
-            <span class="button__text">Club des 27</span>
+            <span class="button__text">EX02 - Club des 27</span>
         </button>
         <script>
             function launchExoSeven() {
@@ -216,6 +216,9 @@
                     "Amy Winehouse",
 
                 ]
+                // var randomArrayOutput = theTwentySeven[Math.floor(Math.random()*theTwentySeven.length)]
+                // var randomIndexGenerator = (Math.floor(Math.random() * 10)) <= 6 ;
+                // console.log(randomIndexGenerator);
                 const displaySomePeople = [];
                 for (let index = 0; index < 4; index++) {
                     console.log(theTwentySeven[index]);
@@ -223,11 +226,35 @@
                 }
                 alert(displaySomePeople);
 
+                /*
+                const theTwentySeven = [
+                    "Robert Johnson",
+                    "Brian Jones",
+                    "Jimi Hendrix",
+                    "Janis Joplin",
+                    "Jim Morrison",
+                    "Kurt Cobain",
+                    "Amy Winehouse",
+
+                ]
+var indexLength = theTwentySeven.length;
+console.log(indexLength);
+var randomIndexGenerator = Math.floor(Math.random() * 10);
+console.log(randomIndexGenerator);
+
+while (randomIndexGenerator > indexLength) {
+randomIndexGenerator = Math.floor(Math.random() * 10);
+console.log(randomIndexGenerator);
+} 
+var index = randomIndexGenerator;
+//console.log(index);
+                */
+
 
             }
         </script>
         <button type="button" class="button" onclick="launchExoEight()">
-            <span class="button__text">Score</span>
+            <span class="button__text">EX03 - Score</span>
         </button>
         <script>
             function launchExoEight() {
