@@ -277,8 +277,10 @@ var index = randomIndexGenerator;
                  console.log(`Tous les points de 0 à ${currentScore} ont été marqués !`); */
             }
         </script>
+
+        <h1>Fonctions</h1>
         <button type="button" class="button" onclick="launchExoNine()">
-            <span class="button__text">Moyenne</span>
+            <span class="button__text">EX01 - Moyenne</span>
         </button>
         <script>
             function launchExoNine() {
@@ -298,8 +300,24 @@ var index = randomIndexGenerator;
                     17,
                     11,
                 ]
-                let averageCalc = // somme totale des elements du tableau / nb delements du tableau
-                    console.log(averageCalc);
+                console.log(theSeventeenHeroes.join());
+                console.log(`Length of Array is ${theSeventeenHeroes.length}`);
+                var sumOfArray = 0;
+                for (let i = 0; i < theSeventeenHeroes.length; i++) {
+                    let itemValue = theSeventeenHeroes[i]
+                    sumOfArray += itemValue
+                }
+                console.log(`Sum of Array is ${sumOfArray}`);
+                let averageCalcOfArray = sumOfArray / theSeventeenHeroes.length
+                console.log(`Average of array is ${Math.round(averageCalcOfArray)}`);
+                alert(`Le tableau contient ${theSeventeenHeroes.length} entrées (${theSeventeenHeroes.join()}).\nLe total des valeurs cumulées des éléments présents dans le tableau est de ${sumOfArray}.\nLa moyenne des éléments contenus dans le tableau est donc de ${sumOfArray} / ${theSeventeenHeroes.length} soit de ${Math.round(averageCalcOfArray)} à l'arrondi.`);
+
+                /*
+                let averageCalc = []
+                for (let i = 0; i < theSeventeenHeroes.length; i++) // somme totale des elements du tableau / nb delements du tableau
+                    
+                console.log(averageCalc);
+                */
             }
         </script>
         <button type="button" class="button" onclick="launchExoTen()">
