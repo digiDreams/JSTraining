@@ -141,19 +141,35 @@
 
         <script>
             function launchExoFive() {
+
+
                 const compareNum = 5;
                 let someNumo = prompt("Choisissez un numéro !"); // 4
                 let getNumo = parseInt(someNumo);
-                // console.log(getNumo);
+                console.log(getNumo);
+                let errorMessage = "Il y a un mojito dans le code, error !";
 
-                switch (getNumo) {
+
+                switch (true) {
                     case (getNumo < compareNum):
                         console.log("Inférieur à 5");
+                        alert("Inférieur à 5");
+                        break;
                     case (getNumo === compareNum):
-                        console.log("Egalà 5");
+                        console.log("Egal à 5");
+                        alert("Egal à 5");
+                        break;
                     case (getNumo > compareNum):
-                        console.log("Supérieur à 5")
+                        console.log("Supérieur à 5");
+                        alert("Supérieur à 5");
+                        break;
+                    default:
+                        console.log(errorMessage);
                 }
+
+
+
+
                 /*
                                 const checkIfMajorTwo = 18;
                                 let firstNameTwo = prompt("Prénom:", "Prénom");
@@ -391,8 +407,8 @@ var index = randomIndexGenerator;
                 /*Driver function to check for above function*/
                 var goldenCombination = [1, 2, 3, 4, 5];
                 let r = 3;
-                let n = arr.length;
-                printCombination(arr, n, r);
+                let n = goldenCombination.length;
+                printCombination(goldenCombination, n, r);
 
                 // Since the elements are sorted, all occurrences of an element
                 // must be together
