@@ -443,6 +443,10 @@ var index = randomIndexGenerator;
         </button>
         <script>
             const serieList = ["Casa de Papel", "Kleo", "Marco Polo", "Qui a tué Sara", "Gran Hotel"];
+            const serieOne = "Stranger Things";
+            const serieTwo = "Game of Thrones";
+            const serieThree = "House of the dragon";
+
             // var serieArray = []
             function launchExoElevenOne() {
                 // serieArray.push(serieList);
@@ -458,11 +462,11 @@ var index = randomIndexGenerator;
 
         <script>
             function launchExoElevenTwo() {
-                if (serieList.includes("Stranger Things")) {
+                if (serieList.includes(serieOne)) {
                     console.log("Déjà présent dans la liste de films !");
                     alert("Déjà présent dans la liste de films !");
                 } else {
-                    serieList.splice(1, 0, "Stranger Things");
+                    serieList.splice(1, 0, serieOne);
                     console.log(serieList);
                     alert(`Série ajoutée en deuxième position (index 1), les séries présentes sont maintenant: ${serieList.join(", ")}`);
                 }
@@ -476,13 +480,13 @@ var index = randomIndexGenerator;
 
         <script>
             function launchExoElevenThree() {
-                if (serieList.includes("Game of Thrones")) {
+                if (serieList.includes(serieTwo)) {
                     console.log("Déjà présent dans la liste de films !");
                     alert("Déjà présent dans la liste de films !");
                 } else {
-                    serieList.push("Game of Thrones");
+                    serieList.push(serieTwo);
                     console.log(serieList);
-                    alert(`Série ajoutée en dernière position, les séries présentes sont maintenant: ${serieList.join(", ")}`);
+                    alert(`Série ${serieTwo} ajoutée en dernière position, les séries présentes sont maintenant: ${serieList.join(", ")}`);
                 }
             }
         </script>
@@ -506,14 +510,21 @@ var index = randomIndexGenerator;
         <script>
             function launchExoElevenFive() {
 
-                if (serieList.includes("Game of Thrones")) {
-                    serieList.splice(serieList.length-1, 1);
-                    serieList.push("House of the dragon");
-                    console.log(`Série Game of Thrones remplacée par House of the dragon, les séries présentes sont maintenant: ${serieList.join(", ")}`);
-                    alert(`Série Game of Thrones remplacée par House of the dragon, les séries présentes sont maintenant: ${serieList.join(", ")}`);
+                if (serieList.includes(serieTwo)) {
+
+                    // This is a working but hard code way of doing it, let do it more dynamically:
+                    /* serieList.splice(serieList.length-1, 1);
+                    serieList.push(serieThree); */
+                    
+                    let index = serieList.indexOf(serieTwo)
+                    serieList.splice((serieTwo[index]));
+                    serieList.splice((serieTwo[index]), serieThree);
+                    // serieTwo[index] = serieThree
+                    console.log(`Série ${serieTwo} remplacée par ${serieThree}, les séries présentes sont maintenant: ${serieList.join(", ")}`);
+                    alert(`Série ${serieTwo} remplacée par ${serieThree}, les séries présentes sont maintenant: ${serieList.join(", ")}`);
                 } else {
-                    console.log("Game of Thrones n'est pas présente dans l'Array ! Ajoutez la d'abord avant de la supprimer patata !");
-                    alert("Game of Thrones n'est pas présente dans l'Array ! Ajoutez la d'abord avant de la supprimer patata !");
+                    console.log(`${serieTwo} n'est pas présente dans l'Array ! Ajoutez la d'abord avant de la supprimer patata !`);
+                    alert(`${serieTwo} n'est pas présente dans l'Array ! Ajoutez la d'abord avant de la supprimer patata !`);
                 }
             }
         </script>
