@@ -434,6 +434,44 @@ var index = randomIndexGenerator;
 
             }
         </script>
+        <h1><b>// Day 2</b></h1>
+
+        <h1>Collections - tableaux</h1>
+
+        <button type="button" class="button" onclick="launchExoElevenOne()">
+            <span class="button__text">EX01 - SERIE_ARRAY</span>
+        </button>
+        <script>
+            const serieList = ["Casa de Papel", "Kleo", "Marco Polo", "Qui a tué Sara", "Gran Hotel"];
+            // var serieArray = []
+            function launchExoElevenOne() {
+                // serieArray.push(serieList);
+                // console.log(serieArray);
+                console.log(serieList);
+                alert(`Les séries présentes sont: ${serieList.join(", ")}`);
+            }
+        </script>
+ <button type="button" class="button" onclick="launchExoElevenTwo()">
+    <span class="button__text">EX01 - ADD_Stranger Things</span>
+</button>
+
+
+    <script>
+    function launchExoElevenTwo() {
+        if (serieList.includes("Stranger Things")) {
+            console.log("Déjà présent dans la liste de films !");
+            alert("Déjà présent dans la liste de films !");
+        } else {
+        serieList.splice(1, 0, "Stranger Things");
+        console.log(serieList);
+        alert(`Série ajoutée en deuxième position (index 1), les séries présentes sont maintenant: ${serieList.join(", ")}`);
+        }
+    }
+</script>
+
+
+        
+        
     </main>
     <footer>
         <h3>Crédits images:</h3>
