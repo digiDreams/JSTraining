@@ -451,27 +451,74 @@ var index = randomIndexGenerator;
                 alert(`Les séries présentes sont: ${serieList.join(", ")}`);
             }
         </script>
- <button type="button" class="button" onclick="launchExoElevenTwo()">
-    <span class="button__text">EX01 - ADD_Stranger Things</span>
-</button>
+        <button type="button" class="button" onclick="launchExoElevenTwo()">
+            <span class="button__text">EX01 - ADD_Stranger Things</span>
+        </button>
 
 
-    <script>
-    function launchExoElevenTwo() {
-        if (serieList.includes("Stranger Things")) {
-            console.log("Déjà présent dans la liste de films !");
-            alert("Déjà présent dans la liste de films !");
-        } else {
-        serieList.splice(1, 0, "Stranger Things");
-        console.log(serieList);
-        alert(`Série ajoutée en deuxième position (index 1), les séries présentes sont maintenant: ${serieList.join(", ")}`);
-        }
-    }
-</script>
+        <script>
+            function launchExoElevenTwo() {
+                if (serieList.includes("Stranger Things")) {
+                    console.log("Déjà présent dans la liste de films !");
+                    alert("Déjà présent dans la liste de films !");
+                } else {
+                    serieList.splice(1, 0, "Stranger Things");
+                    console.log(serieList);
+                    alert(`Série ajoutée en deuxième position (index 1), les séries présentes sont maintenant: ${serieList.join(", ")}`);
+                }
+            }
+        </script>
+
+        <button type="button" class="button" onclick="launchExoElevenThree()">
+            <span class="button__text">EX01 - ADD_Game of Thrones</span>
+        </button>
 
 
-        
-        
+        <script>
+            function launchExoElevenThree() {
+                if (serieList.includes("Game of Thrones")) {
+                    console.log("Déjà présent dans la liste de films !");
+                    alert("Déjà présent dans la liste de films !");
+                } else {
+                    serieList.push("Game of Thrones");
+                    console.log(serieList);
+                    alert(`Série ajoutée en dernière position, les séries présentes sont maintenant: ${serieList.join(", ")}`);
+                }
+            }
+        </script>
+
+        <button type="button" class="button" onclick="launchExoElevenFour()">
+            <span class="button__text">EX01 - Array_itemsNumber</span>
+        </button>
+
+        <script>
+            function launchExoElevenFour() {
+                console.log(`Le nombre d'items présents dans le tableau est : ${serieList.length}`);
+                alert(`Le nombre d'items présents dans le tableau est : ${serieList.length}`);
+            }
+        </script>
+
+
+        <button type="button" class="button" onclick="launchExoElevenFive()">
+            <span class="button__text">EX01 - Replace_GameOfThrones</span>
+        </button>
+
+        <script>
+            function launchExoElevenFive() {
+
+                if (serieList.includes("Game of Thrones")) {
+                    serieList.splice(serieList.length-1, 1);
+                    serieList.push("House of the dragon");
+                    console.log(`Série Game of Thrones remplacée par House of the dragon, les séries présentes sont maintenant: ${serieList.join(", ")}`);
+                    alert(`Série Game of Thrones remplacée par House of the dragon, les séries présentes sont maintenant: ${serieList.join(", ")}`);
+                } else {
+                    console.log("Game of Thrones n'est pas présente dans l'Array ! Ajoutez la d'abord avant de la supprimer patata !");
+                    alert("Game of Thrones n'est pas présente dans l'Array ! Ajoutez la d'abord avant de la supprimer patata !");
+                }
+            }
+        </script>
+
+
     </main>
     <footer>
         <h3>Crédits images:</h3>
